@@ -24,6 +24,12 @@ class calculator_test(unittest.TestCase):
 
     def test_additon(self):
         print("inside addition")
+        self.calcsession.find_element_by_name('Four').click()
+        self.calcsession.find_element_by_name('Plus').click()
+        self.calcsession.find_element_by_name('Four').click()
+        self.calcsession.find_element_by_name('Equals').click()
+        result = self.calcsession.find_element_by_accessibility_id('CalculatorResults').text
+        print(result)
 
     def test_sub(self):
         print("inside sub")
